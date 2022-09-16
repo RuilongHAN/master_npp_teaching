@@ -283,9 +283,9 @@ d'induction $\vv{B}$ normal à $\vv{v}$.
 [[file:figures/cyclotron1.pdf]]
 #+END_CENTER
 
-1) PFD: $\Upsigma\vv{F} = m\vv{a} = \frac{d\vv{p}}{dt}$
+1) PFD: $\Upsigma\vv{F} = m\vv{a} = \frac{\d\vv{p}}{\d t}$
 
-   Régime relativiste $\vv{p} = \gamma{}m\vv{v}$ et donc $\text{d}\vv{p}/\text{d}t =
+   Régime relativiste $\vv{p} = \gamma{}m\vv{v}$ et donc $\d\vv{p}/\d t =
    \gamma{}m\text{d}\vv{v}/\text{d}t$. Or $\vv{v}=R\dot\theta\vv{u}_\theta$ ($\dot\theta < 0$) soit
    $\text{d}\vv{v}/\text{d}t = -R(\text{d}\theta/\text{d}t)^{2}\vv{u}_{r} = -v^{2}/R\vv{u}_{r}$.
    #+BEGIN_SRC latex
@@ -460,7 +460,6 @@ d'induction $\vv{B}$ normal à $\vv{v}$.
    #+END_SRC
 
 ** Accélérateur, section efficace et luminosité
-*** Introduction
 #+ATTR_LATEX: :float wrap :placement {l}{0.5\textwidth} :width 0.4\textwidth
 [[./figures/solid_angle.pdf]] Les mesures de section efficace sont des mesures typiques de physique des
 particules. Elles traduisent la probabilité de passage d'un état initial de la matière $\psi_i$ à un
@@ -473,14 +472,14 @@ faisceau détectera ainsi $\d n$ particules par unité de temps
     \d n=\underbrace{\text{flux incident}}_{\substack{\text{nbr. particules incidentes}\\\text{/unité de temps}}}\times\underbrace{\text{ nbr. de noyaux cible}}_{\substack{\text{nbr. centre diffuseurs}\\\text{/unité de volume}}}\times\text{ épaisseur cible}\times\frac{\d\sigma}{\d\Omega}\d\Omega_\text{détection}
   \end{align*}
 #+END_SRC
-où $\d\Omega_\text{détection}$ = surface de détection/(distance cible-détecteur)^{2} = $\sin\theta
-\d\theta\d\phi$ avec $\theta\in[0,\pi]$ et $\phi\in[0,2\pi]$. Le terme
+où $\d\Omega_\text{détection}$ = surface de détection/(distance cible-détecteur)^{2}. Le terme
 $\left.\frac{\d\sigma}{\d\Omega}\right|_\theta$ est *la section efficace différentielle* à l'angle
-$\theta$ et s'exprime en barn par stéradian où 1 barn[fn:1] = 10^{-24} cm^{2} = 10^{-28} m^{2}=100
-fm^{2}. De la section efficace différentielle, on déduit la section efficace totale $\sigma$ en
-intégrant sur l'angle solide total $\d\Omega$ : $\sigma=\int\frac{\d\sigma}{\d\Omega}\d\Omega$ et
+$\theta$ et s'exprime en barn par stéradian où 1 barn[fn:1] = 10^{-28} m^{2} = 10^{-24} cm^{2}=100
+fm^{2}. De la section efficace différentielle, on déduit la section efficace totale $\sigma$ qui
 correspond à la probabilité qu'une particule incidente ait intéragi avec les particules
-constitutives de la cible.
+constitutives de la cible, en intégrant sur tout l'espace soit
+$\sigma=\int\frac{\d\sigma}{\d\Omega}\d\Omega$ avec $\d\Omega = \sin\theta \d\theta\d\phi$ où
+$\theta\in[0,\pi]$ et $\phi\in[0,2\pi]$.
 
 #+BEGIN_SRC latex
   \begin{align*}
@@ -522,7 +521,7 @@ constitutives de la cible.
 1) \nbsp^{2}_{1}H+\nbsp^{63}_{29}Cu\to\nbsp^{2}_{1}H+\nbsp^{63}_{29}Cu
    #+BEGIN_SRC latex
      \begin{align*}
-       dn=\phi Ne\frac{\d\sigma}{\d\Omega}d\Omega=\phi\frac{\mathcal{N}\rho_e}{A_\text{cible}}\frac{\d\sigma}{\d\Omega}\d\Omega
+       \d n=\phi Ne\frac{\d\sigma}{\d\Omega}\d\Omega=\phi\frac{\mathcal{N}\rho_e}{A_\text{cible}}\frac{\d\sigma}{\d\Omega}\d\Omega
      \end{align*}
    #+END_SRC
    où $\phi=\phi'\pi R^2$ et $\phi'=6\,10^{10}\,\text{s}^{-1}\text{.cm}^{-2}$. Le
@@ -530,7 +529,7 @@ constitutives de la cible.
 
    #+BEGIN_SRC latex
      \begin{align*}
-       \left.dn\right|_{30^\circ}&=\phi\frac{\mathcal{N}\rho_e}{A_\text{cible}}\left.\frac{\d\sigma}{\d\Omega}\right|_{\theta=30^\circ}\frac{S_\text{détecteur}}{d^2_\text{cible-détecteur}}\\
+       \left.\d n\right|_{30^\circ}&=\phi\frac{\mathcal{N}\rho_e}{A_\text{cible}}\left.\frac{\d\sigma}{\d\Omega}\right|_{\theta=30^\circ}\frac{S_\text{détecteur}}{d^2_\text{cible-détecteur}}\\
        &=6\,10^{10}\times\pi\times1^2\times\frac{6.02\,10^{23}\times2\,10^{-3}}{63}\times0.1\,10^{-24}\times\frac{4\times2}{100^2}\\
        &=\unit[287]{deutons/s}
      \end{align*}
@@ -804,7 +803,7 @@ constitutives de la cible.
 3) [@3] Le nombre de particules \alpha détectées se déduit de l'expression suivante
    #+BEGIN_SRC latex
      \begin{align*}
-       dn_\alpha=\phi_{n_\text{th.}}\times\frac{\mathcal{N}\times\rho_e}{A_\text{cible}}\times\frac{\d\sigma}{\d\Omega}\d\Omega
+       \d n_\alpha=\phi_{n_\text{th.}}\times\frac{\mathcal{N}\times\rho_e}{A_\text{cible}}\times\frac{\d\sigma}{\d\Omega}\d\Omega
      \end{align*}
    #+END_SRC
    Le flux incident de neutrons thermiques est donc
@@ -1464,9 +1463,8 @@ On supposera $c=b=t=0$ pour tous les hadrons de cet exercice.
        &=\vv{S}_{q_1}+\vv{S}_{q_2}+\vv{S}_{q_3}+\vv{L}_{q_1/q_2/q_3}
       \end{align*}
    #+END_SRC
-   étant donné que le moment cinétique intrinsèque d'une particule élémentaire
-   telle qu'un quark est son unique spin. De la même façon, la parité de la
-   résonance $R$ peut s'écrire
+   étant donné que le moment cinétique intrinsèque d'une particule élémentaire telle qu'un quark est
+   son unique spin. De la même façon, la parité de la résonance $R$ peut s'écrire
    #+BEGIN_SRC latex
      \begin{align*}
        \pi(R)=\pi(q_1)\times\pi(q_2)\times\pi(q_2)\times\pi(q_3)\times(-1)^{L_{q_1/q_2/q_3}}
@@ -2722,28 +2720,25 @@ Les valeurs des coefficients de Clebsch-Gordan sont données en annexe.
 
 ** Parité intrinsèque du $\pi^{-}$
 #+BEGIN_QUESTION
-Quand des pions négatifs de très basse énergie sont ralentis dans du deutérium,
-ils peuvent, par interaction coulombienne, occuper des états liés du deuton et
-constituer des atomes $\pi^-$ mésiques. Ils peuvent atteindre, en émettant des
-rayons X, l'état fondamental 1s puis être finalement capturés par le deuton
-dans cet état, sous l'effet des interactions nucléaires, via la réaction :
+Quand des pions négatifs de très basse énergie sont ralentis dans du deutérium, ils peuvent, par
+interaction coulombienne, occuper des états liés du deuton et constituer des atomes $\pi^-$
+mésiques. Ils peuvent atteindre, en émettant des rayons X, l'état fondamental 1s puis être
+finalement capturés par le deuton dans cet état, sous l'effet des interactions nucléaires, via la
+réaction :
 #+BEGIN_SRC latex
   \begin{align*}
     \pi^- + d \rightarrow n + n
   \end{align*}
 #+END_SRC
-La parité intrinsèque du méson $\pi^-$ a été déterminée par l'observation de
-cette réaction, où $d$ est le deutérium, état lié proton-neutron de spin-parité
-$I^{\pi} = 1^+$. Le $\pi^-$ de spin 0 étant capturé à l'arrêt, on peut montrer
-que le moment orbital relatif du deutérium et du $\pi^-$ est nul.
+La parité intrinsèque du méson $\pi^-$ a été déterminée par l'observation de cette réaction, où $d$
+est le deutérium, état lié proton-neutron de spin-parité $I^{\pi} = 1^+$. Le $\pi^-$ de spin 0 étant
+capturé à l'arrêt, on peut montrer que le moment orbital relatif du deutérium et du $\pi^-$ est nul.
 
-1) La voie d'entrée. Quel est le moment cinétique total du système $\pi^- d$
-   initial ? Exprimer sa parité en fonction de la parité intrinsèque du
-   $\pi^-$. La réaction étant due à une interaction forte, montrer que la
-   détermination de la parité du système neutron-neutron est une mesure de la
+1) La voie d'entrée. Quel est le moment cinétique total du système $\pi^- d$ initial ? Exprimer sa
+   parité en fonction de la parité intrinsèque du $\pi^-$. La réaction étant due à une interaction
+   forte, montrer que la détermination de la parité du système neutron-neutron est une mesure de la
    parité du $\pi^-$.
 #+END_QUESTION
-
 
 1) Moment cinétique total du système $\pi^-d$
 
@@ -2774,9 +2769,9 @@ que le moment orbital relatif du deutérium et du $\pi^-$ est nul.
    #+END_SRC
 
 #+BEGIN_QUESTION
-2) [@2] La voie de sortie. Compte-tenu de l'antisymétrie de la fonction d'onde
-   dans l'échange des deux nucléons, déterminer complètement le couple $(l,s)$
-   du système des deux neutrons. En déduire la parité intrinsèque du $\pi^-$.
+2) [@2] La voie de sortie. Compte-tenu de l'antisymétrie de la fonction d'onde dans l'échange des
+   deux nucléons, déterminer complètement le couple $(L,S)$ du système des deux neutrons. En déduire
+   la parité intrinsèque du $\pi^-$.
 #+END_QUESTION
 
 2) [@2] Le moment cinétique total s'écrit
@@ -2789,9 +2784,8 @@ que le moment orbital relatif du deutérium et du $\pi^-$ est nul.
      \end{align*}
    #+END_SRC
 
-   Les neutrons étant des fermions, leur spin est demi-entier. Les valeurs de
-   $\vv{S}(nn)$ sont donc soit $\vv{0}$ soit $\vv{1}$. Par ailleurs, la
-   conservation du moment cinétique total impose
+   Les neutrons étant des fermions, leur spin est demi-entier. Les valeurs de $\vv{S}(nn)$ sont donc
+   soit $\vv{0}$ soit $\vv{1}$. Par ailleurs, la conservation du moment cinétique total impose
    #+BEGIN_SRC latex
      \begin{align*}
        \vv{I}(nn)=\vv{I}(\pi d)=\vv{1}
@@ -4055,7 +4049,6 @@ désintègre presqu'à 100% vers le premier état excité du néon\nbsp{}22, sit
         \end{align*}
       #+END_SRC
 
-#+BEGIN_COMMENT
    6) Étant donné l'activité $\mathcal{A}_{\gamma_{1.27}}=1581$ désintégrations
       par seconde dans tout l'espace soit 4\pi stéradian, le nombre de photons
       détectés à 1 m de la cible devient
@@ -4067,8 +4060,6 @@ désintègre presqu'à 100% vers le premier état excité du néon\nbsp{}22, sit
         \end{align*}
       #+END_SRC
 
-#+END_COMMENT
-
 ** Tomographie par émission de positrons
 #+ATTR_HTML: :width 300
 #+ATTR_LATEX: :width 0.35\textwidth
@@ -4076,36 +4067,33 @@ désintègre presqu'à 100% vers le premier état excité du néon\nbsp{}22, sit
 [[./figures/pet_cerveau.jpg]]
 
 #+BEGIN_QUESTION
-La tomographie par émission de positrons (TEP) est une technique d'imagerie
-isotopique utilisant des molécules biologiques marquées par des isotopes
-radioactifs émetteurs $\beta^+$ à demi-vie très brève, tel que le\nbsp^{11}C,
-qui permettent une visualisation des organes en fonctionnement, par mesure des
-deux photons de 511 keV émis simultanément à 180 degrés l'un de l'autre lors de
-l'annihilation $e^+e^-$. Les courtes périodes des radioisotopes utilisés pour la
-TEP (de 2 mn pour le\nbsp^{15}O à 110 mn pour le\nbsp^{18}F) imposent la
-présence simultanée d'un laboratoire de radiochimie et d'une caméra TEP sur le
-lieu de l'accélérateur produisant les radioéléments.
+La tomographie par émission de positrons (TEP) est une technique d'imagerie isotopique utilisant des
+molécules biologiques marquées par des isotopes radioactifs émetteurs $\beta^+$ à demi-vie très
+brève, tel que le\nbsp^{11}C, qui permettent une visualisation des organes en fonctionnement, par
+mesure des deux photons de 511 keV émis simultanément à 180 degrés l'un de l'autre lors de
+l'annihilation $e^+e^-$. Les courtes périodes des radioisotopes utilisés pour la TEP (de 2 mn pour
+le\nbsp^{15}O à 110 mn pour le\nbsp^{18}F) imposent la présence simultanée d'un laboratoire de
+radiochimie et d'une caméra TEP sur le lieu de l'accélérateur produisant les radioéléments.
 
-L'isotope radioactif\nbsp^{11}C, de période radioactive $T_{1/2}$ = 20.36 min, est
-formé par la réaction nucléaire
+L'isotope radioactif\nbsp^{11}C, de période radioactive $T_{1/2}$ = 20.36 min, est formé par la
+réaction nucléaire
 #+BEGIN_SRC latex
   \begin{align*}
     p + ^{14}_{7}\text{N}\rightarrow ^{11}_{6}\text{C}+\alpha
   \end{align*}
 #+END_SRC
-en irradiant une cible d'azote de nombre de masse A = 14, d'épaisseur 10
-mg/cm^{2} avec un faisceau de protons contenant 4 10^{12} particules/seconde. La
-section efficace totale de cette réaction est \sigma = 200 mb. Au début de
-l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
+en irradiant une cible d'azote de nombre de masse A = 14, d'épaisseur 10 mg/cm^{2} avec un faisceau
+de protons contenant 4 10^{12} particules/seconde. La section efficace totale de cette réaction est
+\sigma = 200 mb. Au début de l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans
+l'échantillon.
 
 1) Calculer le nombre de noyaux radioactifs obtenus au bout de 3h d'irradiation.
 #+END_QUESTION
 
-1) La variation du nombre de noyaux de carbone 11, $\frac{dn}{dt}$, est égale à
-   au nombre de noyaux créés par irradiation soustrait du nombre de noyaux se
-   désintégrant soit $\frac{dn}{dt}=n_i-\lambda n$. La résolution de cette
-   équation différentielle donne une variation temporelle du nombre de noyaux
-   $n(t)$ égale à
+1) La variation du nombre de noyaux de carbone 11, $\frac{\d n}{\d t}$, est égale à au nombre de
+   noyaux créés par irradiation soustrait du nombre de noyaux se désintégrant soit $\frac{\d n}{\d
+   t}=n_i-\lambda n$. La résolution de cette équation différentielle donne une variation temporelle
+   du nombre de noyaux $n(t)$ égale à
    #+BEGIN_SRC latex
      \begin{align*}
        n(t)&=\frac{n_i}{\lambda}\left(1-e^{-\lambda t}\right)\\
@@ -4128,6 +4116,7 @@ l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
    le\nbsp^{11}C dans des molécules complexes qui sont alors injectées au
    patient.
 #+END_QUESTION
+
 2) [@2] À $t=t_0=\unit[3]{h}$, l'irradiation est stoppée, les noyaux de carbone
    ne faisant que se déintégrer. L'activité en radioéléments devient
    #+BEGIN_SRC latex
@@ -4144,6 +4133,7 @@ l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
 3) [@3] Quelle sera l'activité résiduelle 24h après la fin de l'irradiation ?
    Commenter les deux résultats.
 #+END_QUESTION
+
 3) [@3] Après 24 heures, l'activité de la "source" sera
    #+BEGIN_SRC latex
      \begin{align*}
@@ -4166,6 +4156,7 @@ l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
      cyclotron à proximité du centre d’examen.
 
 ** Formule de Bethe et Weizsäcker
+
 #+BEGIN_QUESTION
 1)
    1) Expliquer les différents termes intervenant dans la formule semi-empirique donnant la masse
@@ -4182,6 +4173,7 @@ l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
    2) En déduire que l'excès de masse atomique $\Delta M_\text{at}c^2$ pour des noyaux isobariques
       s'écrit comme un polynome du second degré en $Z$. Combien y a-t-il de paraboles possibles ?
 #+END_QUESTION
+
 1) [@1]
    1) À partir de la question [[Définitions]], la masse atomique est égale à
       #+BEGIN_SRC latex
@@ -4204,6 +4196,7 @@ l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
    Expérimentalement, les noyaux suivants sont \beta-stables : \(^{21}_{10}\)Ne et
    \(^{95}_{42}\)Mo. Discuter ce résultat.
 #+END_QUESTION
+
 2) [@2] Le nombre de nucléons ou nombre de masse $A$ est impair pour les
    isobares $A=21$ et $A=95$. Aussi, le terme d'appariement $\delta(Z,A)$ est
    donc nul. L'élément le plus stable dans une famille d'isobares est celui avec
@@ -4216,6 +4209,7 @@ l'irradiation ($t=0$), il n'y a aucun noyau radioactif dans l'échantillon.
        Z_0&=\frac{2a_AA}{a_CA^{2/3}+4a_A}
      \end{align*}
    #+END_SRC
+
    *Application numérique :*
 
    $A=21$ $Z_0=9.93\sim10$ correspond au noyau \beta-stable de néon 22
@@ -4245,8 +4239,9 @@ atomique $\Delta M_\text{at}c^2$, en MeV :
 1) Rappeler les différents types de désintégrations isobariques et les conditions énergétiques
    associées.
 #+END_QUESTION
-1) Désintégrations isobariques (\beta^{-}, \beta^{+}, CE)
 
+1) Désintégrations isobariques (\beta^{-}, \beta^{+}, CE)
+   
    - désintégration \beta^{-} ::
      $^A_Z\text{X}\to\,^A_{Z+1}\text{Y}+e^-+\bar{\nu}_e$
      #+BEGIN_SRC latex
@@ -4283,7 +4278,7 @@ atomique $\Delta M_\text{at}c^2$, en MeV :
             Q>0 \Longleftrightarrow\,& m(A,Z)c^2+m_ec^2>m(A,Z-1)c^2\\
             &M_\text{at.}(A,Z)c^2-Zm_ec^2+m_ec^2>M_\text{at.}(A,Z-1)c^2-(Z-1)m_ec^2\\
             &M_\text{at.}(A,Z)c^2>M_\text{at.}(A,Z-1)c^2\\
-            &\Delta M_\text{at.}(A,Z)c^2>\Delta M_\text{at.}(A,Z+1)c^2\\
+            &\Delta M_\text{at.}(A,Z)c^2>\Delta M_\text{at.}(A,Z-1)c^2\\
             &Q_\text{CE} = Q_{\beta^+}+2m_ec^2
           \end{align*}
         #+END_SRC
@@ -4303,6 +4298,7 @@ atomique $\Delta M_\text{at}c^2$, en MeV :
 #+BEGIN_QUESTION
 2) [@2] Estimer graphiquement l'énergie d'appariement $\delta(A)$ en MeV.
 #+END_QUESTION
+
 2) [@2] Le diagramme $M_\text{at.}c^2=f(Z)$ ou $\Delta M_\text{at.}c^2=f(Z)$ pour une famille
    d'isobares donnée est le suivant
 
@@ -4342,6 +4338,7 @@ atomique $\Delta M_\text{at}c^2$, en MeV :
    positrons) émis dans ces désintégrations ? Préciser le (ou les) noyau(x)
    stable(s) vis à vis de ces désintégrations.
 #+END_QUESTION
+
 3) [@3] D'après la figure [[mass_parabola]], les désintégrations \beta^{-} sont Cr\to Mn, Mn\to Fe et
    Co\to Ni. Les désintégrations \beta^{+} ou CE sont Zn\to Cu, Cu\to Ni et Co\to Fe. Les deux
    noyaux stables de cette famille sont donc le fer 58 et le nickel 58.
@@ -4397,6 +4394,7 @@ atomique $\Delta M_\text{at}c^2$, en MeV :
      #+END_SRC
 
 ** Étoiles à neutrons
+
 #+BEGIN_QUESTION
 On peut montrer que l'énergie potentielle d'attraction gravitationnelle d'une masse sphérique $M$ de
 densité uniforme et de rayon $R$ est donnée par $E_G=-\frac{3 GM^2}{5R}$.
@@ -4413,6 +4411,7 @@ densité uniforme et de rayon $R$ est donnée par $E_G=-\frac{3 GM^2}{5R}$.
       utilisera $G/c^4$ = 1.3239 10^{-39} GeV^{-1}.fm). Calculer sa
       masse. Comparer au rayon et à la masse du Soleil.
 #+END_QUESTION
+
 1) Pour une étoile à neutrons, l'énergie de liaison devient (\(Z=0\))
    #+BEGIN_SRC latex
      \begin{align*}
