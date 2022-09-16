@@ -3,13 +3,14 @@
 /README.el
 /latex.d/
 *.toc
-*.tex
+*.tex*
 *.el
 *.fdb*
 *.aux
 *.out
 *.fls
 *.log
+*.xdv
 /td_np.pdf
 /README.pdf
 /student/
