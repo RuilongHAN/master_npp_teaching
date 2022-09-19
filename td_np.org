@@ -663,7 +663,7 @@ $\theta\in[0,\pi]$ et $\phi\in[0,2\pi]$.
 
       #+BEGIN_SRC latex
         \begin{align*}
-          \frac{d\sigma}{d\Omega}=\frac{16\alpha^2(\hbar c)^2}{E^2\theta^4}
+          \frac{\d\sigma}{\nd\Omega}=\frac{16\alpha^2(\hbar c)^2}{E^2\theta^4}
         \end{align*}
       #+END_SRC
       avec $E=\unit[90]{GeV}$ et $\alpha=\frac{e^2}{4\pi\epsilon_0\hbar c}$ où
