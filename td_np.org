@@ -700,7 +700,7 @@ $\theta\in[0,\pi]$ et $\phi\in[0,2\pi]$.
 
          #+BEGIN_REMARK
          La luminosité instantanée du LHC est voisine de 10^{34} cm^{-2}.s^{-1} soit 10^{-2}
-         pb^{-1}.s^{-1}. À titre de comparaison, le collisionneur $p\bar{p}$ du Tevratron avait une
+         pb^{-1}.s^{-1}. À titre de comparaison, le collisionneur $p\bar{p}$ du Tevatron avait une
          luminosité de 3.2 10^{32} cm^{-2}.s^{-1} ce qui intégré sur son temps d'acquisition de 2001
          à 2008 a fourni une luminosité intégrée de 5000 pb^{-1}. En un peu moins d'une semaine de
          prise de données, le LHC a atteint la même luminosité intégrée que le Tevatron.
@@ -1423,11 +1423,9 @@ On supposera $c=b=t=0$ pour tous les hadrons de cet exercice.
      \begin{align*}
        \tau =\frac{\hbar}{\Gamma} = \frac{\hbar c}{\Gamma c} =
        \frac{\unit[197.3]{MeV.fm}}{\unit[240]{MeV}\cdot\unit[3\,10^{23}]{fm/s}} =
-       \unit[2.7\,10^{-24}]{s}
+       \unit[2.7\,10^{-24}]{s}\rightarrow\text{désintégration par \textbf{interaction forte}}
      \end{align*}
    #+END_SRC
-
-   \rightarrow désintégration par *interaction forte*
 
 #+BEGIN_QUESTION
 6) [@6] Cette résonance est créée lorsque le moment orbital relatif dans la voie
@@ -1478,10 +1476,7 @@ On supposera $c=b=t=0$ pour tous les hadrons de cet exercice.
 #+BEGIN_QUESTION
 7) [@7] Quel est son isospin ?
 #+END_QUESTION
-7) [@7] Conservation de $\vv{T}$ et $T_3$ dans la désintégration de
-   $R\rightarrow K^++\Sigma^+$
-
-
+7) [@7] Conservation de $\vv{T}$ et $T_3$ dans la désintégration de $R\rightarrow K^++\Sigma^+$
    #+BEGIN_SRC latex
      \begin{align*}
        T_3(R) &= T_3(K^+) + T_3(\Sigma^+) = 3/2\\
@@ -1496,7 +1491,7 @@ On supposera $c=b=t=0$ pour tous les hadrons de cet exercice.
 #+END_QUESTION
 8) [@8] La conservation du nombre baryonique, de la charge électrique et de l'étrangeté font que $R$
    est un baryon de charge $Q/e=+2$ et d'étrangeté nulle. En se reférant au tableau page 30, on note
-   que cette résonance présente les mêmes propriétés que la baryon $\Delta^{++}$ à ceci près que sa
+   que cette résonance présente les mêmes propriétés que le baryon $\Delta^{++}$ à ceci près que sa
    masse 1933 MeV et sa durée de vie sont respectivement plus élevée et plus courte[fn:4]. *La
    résonance $\bm{R}$ est donc un état excité de $\bm{\Delta^{++}}$.*
 
@@ -1508,12 +1503,12 @@ On supposera $c=b=t=0$ pour tous les hadrons de cet exercice.
 
    $Q/e$, $B$, $I^\pi$ sont conservés.
 
-   |----------+----------+---+------------+-------------+------------+---+------------+------------|
-   |          |  $\pi^-$ | + | p          | \rightarrow | $K^+$      | + | $\Sigma^-$ |            |
+   |----------+----------+---+------------+-------------+------------+---+------------+--------|
+   |          |  $\pi^-$ | + | $p$        | \rightarrow | $K^+$      | + | $\Sigma^-$ |        |
    | $T_3$    |       -1 | + | 1/2        | =           | 1/2        | + |         -1 | \cmark |
    | $\vv{T}$ | $\vv{1}$ | + | $\vv{1/2}$ | =           | $\vv{1/2}$ | + |   $\vv{1}$ | \cmark |
    | $s$      |        0 | + | 0          | =           | 1          | + |         -1 | \cmark |
-   |----------+----------+---+------------+-------------+------------+---+------------+------------|
+   |----------+----------+---+------------+-------------+------------+---+------------+--------|
 
 *Remarques :* les baryons $\Delta^{++}$ et $\Delta^-$ sont respectivement constitués de 3 quarks $u$
 et 3 quarks $d$. Or le moment cinétique total de ces particules 3/2 impliquent que le spin des 3
@@ -2265,7 +2260,6 @@ N. Spergel & John N. Bahcall [[http://www.sciencedirect.com/science/article/pii/
           \frac{\vv{1}}{2} + \frac{\vv{1}}{2} + \frac{\vv{1}}{2}
         \end{align*}
       #+END_SRC
-
 
       Les 3 quarks $s$ sont donc tous dans le même état de spin +1/2 ce qui par
       définition est impossible en raison du principe d'exclusion de Pauli
