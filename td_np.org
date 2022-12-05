@@ -4,6 +4,7 @@
 #+EMAIL:  xavier.garrido@u-psud.fr
 #+OPTIONS: ^:{} toc:2 author:nil email:nil split:html
 #+LATEX_CLASS: teaching-class
+#+LATEX_CLASS_OPTIONS: [novc]
 
 * TD1 : Cinématique
 #+BEGIN_QUESTION
@@ -2373,7 +2374,7 @@ Soit le méson $D^0$, ayant pour caractéristiques : $mc^2$ = 1865 MeV, $I^{\pi}
 5) [@5] On observe la désintégration $D^0 \rightarrow K^- + \pi^+$. En utilisant seulement le moment
    cinétique total et la parité, dire quelle est l'interaction responsable de cette
    désintégration. Trouver d'autres arguments à l'appui de cette réponse. On donne pour les kaons et
-   les pions : I$^{\pi}$ = 0$^-$.
+   les pions : $I^\pi = 0^-$.
 #+END_QUESTION
 
 5) [@5] $D^0\rightarrow K^-+\pi^+$. Le fait de n'avoir à tester que la (non)conservation du moment
@@ -3811,7 +3812,7 @@ premiers termes.
      et protons seront proches (terme symétrique \(a_{A}\tfrac{\left(N-Z\right)^2}{A}\)). Ce terme
      d'asymétrie traduit le fait que les nucléons étant des fermions, avoir un excédent de proton ou
      de neutron a tendance à augmenter l'énergie et donc diminuer la liaison du noyau en raison du
-     remplissage des niveaux de Fermi. Ainsi, un noyau cherche à égaliser le nombre de proton et de
+     remplissage des niveaux de Fermi. Ainsi, un noyau cherche à égaliser le nombre de protons et de
      neutrons tout du moins pour les noyaux légers. Enfin, l'appariement $\delta(A,Z)$ joue un rôle
      important dans l'énergie de liaison : les noyaux ayant un nombre pair de protons/neutrons
      seront plus liés.
@@ -4886,9 +4887,8 @@ quarks (étrangeté, charme, ...) et \pi est la parité intrinsèque du quark.
 | \tau caractéristique         | 10^{-23} à 10^{-20} s                     | 10^{-20} à 10^{-15} s                                    | > 10^{-13} s                         |                              |
 |------------------------------+-------------------------------------------+----------------------------------------------------------+--------------------------------------+------------------------------|
 
-Les deux tableaux suivants résument les interactions auxquelles sont soumises
-les différentes particules élémentaires et les lois de conservation que
-vérifient leurs interactions.
+Les deux tableaux suivants résument les interactions auxquelles sont soumises les différentes
+particules élémentaires et les lois de conservation que vérifient leurs interactions.
 
 |--------------+------------+---------+-------------|
 | Particules   | Int. forte | Int. EM | Int. faible |
@@ -4898,8 +4898,8 @@ vérifient leurs interactions.
 | neutrinos    | non        | non     | oui         |
 |--------------+------------+---------+-------------|
 
-*Toutes les interactions conservent l'énergie, l'impulsion, le moment cinétique,
- le nombre baryonique, les nombes leptoniques et la charge électrique.*
+*Toutes les interactions conservent l'énergie, l'impulsion, le moment cinétique, le nombre
+ baryonique, les nombes leptoniques et la charge électrique.*
 
 |--------------------------------+------------+---------+-------------|
 | Nombre quantique ou            |            |         |             |
@@ -4914,19 +4914,18 @@ vérifient leurs interactions.
 
 * Aide-mémoire de Noyaux & Particules
 
-1) On utilise en physique nucléaire des unités adaptées aux ordres de grandeurs
-   que l'on y rencontre.
+1) On utilise en physique nucléaire des unités adaptées aux ordres de grandeurs que l'on y
+   rencontre.
 
-   - Longueur :: 1 fm = *1 fermi* (ou fentomètre) = 10^{-15} m (/cf./ 1 Angström =
-        10 ^{10} m)
-   - Surface :: 1 b = *1 barn* = 10^{2} fm^{2} = 10^{-28} m^{2}. Cette unité est
-        utilisée pour les sections efficaces et les moments quadrupolaires.
-   - Énergie :: 1 MeV = 10^{6} eV = 1.602 10^{-13} Joules, 1 GeV = 10^{3} MeV, 1
-        TeV = 10^{6} MeV et 1 keV = 10^{-3} MeV
+   - Longueur :: 1 fm = *1 fermi* (ou fentomètre) = 10^{-15} m (/cf./ 1 Angström = 10 ^{10} m)
+   - Surface :: 1 b = *1 barn* = 10^{2} fm^{2} = 10^{-28} m^{2}. Cette unité est utilisée pour les
+     sections efficaces et les moments quadrupolaires.
+   - Énergie :: 1 MeV = 10^{6} eV = 1.602 10^{-13} Joules, 1 GeV = 10^{3} MeV, 1 TeV = 10^{6} MeV et
+     1 keV = 10^{-3} MeV
    - Masse ::
-     - La masse $m_0$ d'une particule ou d'un noyau est très souvent exprimée en
-       MeV (ou GeV), ce qui correspond à l'énergie de masse au repos
-       $m_0c^2$. On donne les masses de quelques particules en MeV :
+     - La masse $m_0$ d'une particule ou d'un noyau est très souvent exprimée en MeV (ou GeV), ce
+       qui correspond à l'énergie de masse au repos $m_0c^2$. On donne les masses de quelques
+       particules en MeV :
        | Photons (\gamma)   |      0 | Neutrino ($\nu_e,\bar{\nu}_e,\nu_\mu,\bar{\nu}_\mu,\nu_\tau,\bar{\nu}_\tau$) |    ~0 |
        | Électron ($e^\pm$) | 0.5110 | Muon ($\mu^\pm$)                                                             | 105.7 |
        |                    |        |                                                                              |       |
@@ -4934,25 +4933,22 @@ vérifient leurs interactions.
        | (\pi^{0})          |  135.0 | Proton ($p$)                                                                 | 938.3 |
        | (\pi^{$\pm$})      |  139.6 | Neutron ($n$)                                                                | 939.6 |
 
-       Différence de masse neutron-proton : $(m_n-m_p)c^2 = 1/293$ MeV. On
-       notera la relation $\nicefrac{M}{m_e}$ = 1837, qui est le rapport de la
-       masse moyenne du nucléon à celle de l'électron, avec $M$ = 1.674 10^{-27}
-       kg.
-     - Une autre unité importante est *l'unité de masse atomique* (u ou u.m.a.) dont
-       la valeur est :
+       Différence de masse neutron-proton : $(m_n-m_p)c^2 = 1/293$ MeV. On notera la relation
+       $\nicefrac{M}{m_e}$ = 1837, qui est le rapport de la masse moyenne du nucléon à celle de
+       l'électron, avec $M$ = 1.674 10^{-27} kg.
+     - Une autre unité importante est *l'unité de masse atomique* (u ou u.m.a.) dont la valeur est :
        #+BEGIN_SRC latex
          \begin{align*}
            1\,\text{u} = \unit[931.5]{MeV/c}^2
          \end{align*}
        #+END_SRC
-       Par définition, elle est telle que la masse de l'atome neutre de carbone 12
-       soit $M_\text{at.}$(^{12}C) = 12 u.
+       Par définition, elle est telle que la masse de l'atome neutre de carbone 12 soit
+       $M_\text{at.}$(^{12}C) = 12 u.
 
-       *L'excès de masse atomique* est $\Delta M_\text{at.} = M_\text{at.} - A$ où
-       $M_\text{at.}$ est la masse de l'atome neutre considéré (esprimée en u) et
-       $A$ le nombre de masse du noyau de cet atome (nombre de nucléons). Cet
-       excès de masse peut être exprimé en MeV. Avec la relation 1 u$c^2$ = 931.5
-       MeV, on obtient :
+       *L'excès de masse atomique* est $\Delta M_\text{at.} = M_\text{at.} - A$ où $M_\text{at.}$ est
+       la masse de l'atome neutre considéré (esprimée en u) et $A$ le nombre de masse du noyau de
+       cet atome (nombre de nucléons). Cet excès de masse peut être exprimé en MeV. Avec la relation
+       1 u$c^2$ = 931.5 MeV, on obtient :
        #+BEGIN_SRC latex
          \begin{align*}
            \Delta M_\text{at.}c^2(\text{MeV}) = M_\text{at.}c^2(\text{MeV})-931.5A
