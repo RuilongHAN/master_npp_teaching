@@ -3820,9 +3820,9 @@ premiers termes.
        \begin{align*}
          \delta(A,Z)=\left\{
          \begin{array}{cl}
-           +\frac{12}{\surd A}&\text{ pour les noyaux pair-pair}\\
+           +\frac{\unit[12]{MeV}}{\surd A}&\text{ pour les noyaux pair-pair}\\
            0&\text{ pour les noyaux impair-pair}\\
-           -\frac{12}{\surd A}&\text{ pour les noyaux impair-impair}
+           -\frac{\unit[12]{MeV}}{\surd A}&\text{ pour les noyaux impair-impair}
          \end{array}
          \right.
        \end{align*}
